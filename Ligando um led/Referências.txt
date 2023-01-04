@@ -1,0 +1,8 @@
+Repositório utilizado para funcionamento:
+    - https://github.com/Omkarcoder/ESP8266-Firebase-LED-Android
+
+- O Arduino IDE foi baixado pela microsoft store;
+- Fiz toda configuração básica para adaptar para o esp8266;
+- Baixei as bibliotecas que precisava;
+  - Link da última instalada:
+      -https://github.com/mobizt/Firebase-ESP8266 ;
