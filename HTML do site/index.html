@@ -49,57 +49,215 @@
                         <div class="col-lg-2 mt-5 mb-5">
                             <div class="card h-100 shadow border-0">
                                 <img class="card-img-top" src="assets/Temp.png" alt="..." />
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <title>Avicultura.LOG</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/cartoon-chicken.png" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body class="d-flex flex-column  h-100">
+        <main class="flex-shrink-0">
+            <!-- Navigation-->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container px-5">
+                    <a class="navbar-brand" href="index.html"><img src="assets/frango2.png" alt="LOGO"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item lead"><a class="nav-link" href="index.html">Sistema</a></li>
+                            <li class="nav-item lead"><a class="nav-link" href="about.html">Sobre o projeto</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- Header-->
+            <header class="bg-dark py-5">
+                <div class="container px-5">
+                    <div class="row gx-5 align-items-center justify-content-center">
+                        <div class="col-lg-8 col-xl-7 col-xxl-6">
+                            <div class="text-center text-xl-start">
+                                <h1 class="display-5 fw-bolder text-white mb-2">Avicultura.LOG</h1>
+                                <p class="lead fw-normal text-white-50 mb-4">O projeto Avicultura.Log tem o intuito de monitorar a temperatura e umidade de um aviário.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 mt-5 mb-5">
+                            <div class="card h-100 shadow border-0">
+                                <img class="card-img-top" src="assets/Umi.png" alt="..." />
                                 <div class="card-body p-4">
-                                    <a class="text-decoration-none link-dark stretched-link" href="#!"><h5 class="card-text mb-2 text-center">23°C</h5></a>
+                                    <a class="text-decoration-none link-dark stretched-link" href="#!"><h5 class="card-text mb-2 text-center"><span id="currentUmid" class="statistic">-</span></h5></a>
                                 </div>
                             </div>
                         </div>
-                       <!-- <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="https://dummyimage.com/600x400/343a40/6c757d" alt="..." /></div>
-                    </div> -->
-                </div>
-            </header>
-            <!-- Features section-->
-            <section class="py-5" id="features">
-                <div class="container px-5 my-5">
-                    <div class="row gx-5 align-items-center">
-                        <h2 class="fw-bolder text-center mb-3"><u>Histórico:</u></h2>
-                        <table class="table table-primary text-center">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Data</th>
-                                    <th scope="col">Umidade</th>
-                                    <th scope="col">Temperatura</tr>
-                                </tr>
-                            </thead>
-                            <tbody class="table-group-divider">
-                            <tr>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                            </tr>
-                            <tr>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                            </tr>
-                            </tbody>
-                        </table>
+                        <div class="col-lg-2 mt-5 mb-5">
+                            <div class="card h-100 shadow border-0">
+                                <img class="card-img-top" src="assets/Temp.png" alt="..." />
+                                <div class="card-body p-4">
+                                    <a class="text-decoration-none link-dark stretched-link" href="#!"><h5 class="card-text mb-2 text-center"><span id="currentTemp" class="statistic">-</span></h5></a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
+            </header>
+        <section id="features">
+                <div class="container px-5 my-5">
+                    <div class="row gx-5">
+                        <div class="col-lg-12 mb-5">
+                            <h2 class="fw-bolder text-center mb-5"><u>Aparelhos:</u></h2>
+                            <div class="col">
+                                <div class="card h-100">
+                                  <div class="card-body text-center">
+                                    <h5 class="card-title mb-3">Ventoinha</h5>
+                                    <a href="#"><button type="button" class="btn btn-outline-danger">OFF</button></a>
+                                    <a href="#"><button type="button" class="btn btn-outline-success">ON</button></a>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                       <div class="col-lg-12 mb-5">
+                            <div class="col">
+                                <div class="card h-100">
+                                  <div class="card-body text-center">
+                                    <h5 class="card-title mb-3">Lâmpada</h5>
+                                    <a href="#"><button type="button" class="btn btn-outline-danger">OFF</button></a>
+                                    <a href="#"><button type="button" class="btn btn-outline-success">ON</button></a>
+                                  </div>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Features section-->
+            <section id="features">
+                <div class="container px-5 my-5">
+                    <div class="row gx-5 align-items-center">
+                        <h2 class="fw-bolder text-center mb-5"><u>Gráficos:</u></h2>
+                        <div class="card h-100 shadow border-0 mb-5">
+                            <canvas id="tempLineChart"></canvas>
+                        </div>
+                        
+                        <div class="card h-100 shadow border-0">
+                            <canvas id="umidLineChart"></canvas>
+                        </div>
+                    </div>
+                    </div>
+                </div>
             </section>
         </main>
         <!-- Footer-->
-        <footer class="bg-dark py-4 mt-auto">
         <footer class="bg-dark py-4 mt-auto">
             <div class="container my-2 text-center">
                 <div class="small m-0 text-white">Avicultura.Log - If Baiano campus Guanambi</div>
             </div>
         </footer>
-        </footer>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+
+        <!-- Bootstrap core JS-->
+        <script src="https://www.gstatic.com/firebasejs/9.16.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.16.0/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.17.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.17.2/firebase-analytics.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Core theme JS-->
+                
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.min.js"></script>
+        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+                
+        <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-database.js"></script>
+        
+
+        <script>
+            (function () {
+
+                // Inicia o firebase Firebase
+                var config = {
+                    apiKey: "AIzaSyDjE1u00t2I6lqAJWmZ4rIaA4Ivcchaa60",
+                    authDomain: "dht11weatherstat.firebaseapp.com",
+                    databaseURL: "https://dht11weatherstat-default-rtdb.firebaseio.com",
+                    projectId: "dht11weatherstat",
+                    storageBucket: "dht11weatherstat.appspot.com",
+                    messagingSenderId: "653268329600",
+                    appId: "1:653268329600:web:4bf55719501df2b9c53265",
+                    measurementId: "G-40KL0L93ST"
+                };
+
+                firebase.initializeApp(config);
+
+                var db = firebase.database();
+
+                // Cria os listeners dos dados no firebase
+                var umidRef = db.ref('humidity');
+                var tempRef = db.ref('temperature');
+
+
+                // Registra as funções que atualizam os gráficos e dados atuais da telemetria
+                tempRef.on('value', onNewData('currentTemp', 'tempLineChart', 'Temperatura', 'C°'));
+                umidRef.on('value', onNewData('currentUmid', 'umidLineChart', 'Umidade', '%'));
+
+
+            })();
+
+
+            // Retorna uma função que de acordo com as mudanças dos dados
+            // Atualiza o valor atual do elemento, com a metrica passada (currentValueEl e metric)
+            // e monta o gráfico com os dados e descrição do tipo de dados (chartEl, label)
+            function onNewData(currentValueEl, chartEl, label, metric) {
+                return function (snapshot) {
+                    var readings = snapshot.val();
+                    if (readings) {
+                        var currentValue;
+                        var data = [];
+                        for (var key in readings) {
+                            currentValue = readings[key]
+                            data.push(currentValue);
+                        }
+
+                        document.getElementById(currentValueEl).innerText = currentValue + ' ' + metric;
+                        buildLineChart(chartEl, label, data);
+                    }
+                }
+            }
+
+            // Constroi um gráfico de linha no elemento (el) com a descrição (label) e os
+            // dados passados (data)
+            function buildLineChart(el, label, data) {
+                var elNode = document.getElementById(el);
+                new Chart(elNode, {
+                    type: 'line',
+                    data: {
+                        labels: new Array(data.length).fill(""),
+                        datasets: [{
+                            label: label,
+                            data: data,
+                            borderWidth: 1,
+                            fill: false,
+                            spanGaps: false,
+                            lineTension: 0.1,
+                            backgroundColor: "#0dcaf0",
+                            borderColor: "#0d6efd"
+                        }]
+                    }
+                });
+            }
+
+
+        </script>        
     </body>
 </html>
